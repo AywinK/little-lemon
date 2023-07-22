@@ -84,7 +84,6 @@ body {
   align-items: center;
 }
 
-footer,
 footer>div,
 footer>div>* {
   align-items: flex-start;
