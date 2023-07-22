@@ -17,7 +17,6 @@ const Nav = ({ isFooter }) => {
         color: "var(--secondary-white)",
         textDecoration: "none",
         listStyle: "none",
-        marginRight: "2vw",
         maxWidth: "400px"
     }
 
