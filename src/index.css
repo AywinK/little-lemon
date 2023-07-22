@@ -98,6 +98,3 @@ body {
 
 /* not sure why duplicating it makes it work */
 
-body {
-  background-color: var(--secondary-white);
-}
