@@ -84,6 +84,12 @@ body {
   align-items: center;
 }
 
+footer,
+footer>div,
+footer>div>* {
+  align-items: flex-start;
+}
+
 /* responsive media queries */
 
 footer,
@@ -93,11 +99,5 @@ footer>div>* {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-}
-
-footer>div>* {
-  @media (min-width: 651px) {
-    align-items: flex-start !important;
   }
 }
