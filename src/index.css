@@ -15,8 +15,6 @@
   box-sizing: border-box;
 }
 
-;
-
 /* font family imports */
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap');
 
@@ -31,15 +29,11 @@ body {
   text-transform: none;
 }
 
-;
-
 .displayTitle,
 .subTitle,
 .regularTitle {
   font-family: "Markazi Text", serif;
 }
-
-;
 
 /* font size setup */
 .leadText,
@@ -47,20 +41,14 @@ body {
   font-size: 18;
 }
 
-;
-
 .subTitle,
 .regularTitle {
   font-size: 40;
 }
 
-;
-
 .displayTitle {
   font-size: 64;
 }
-
-;
 
 /* font weight setup */
 .displayTitle,
@@ -69,32 +57,21 @@ body {
   font-weight: 500;
 }
 
-;
-
 .cardTitle {
   font-weight: 600;
 }
-
-;
 
 .sectionTitle,
 .sectionCategories {
   font-weight: 700;
 }
 
-;
-
 /* setup text transforms */
 .sectionTitle {
   text-transform: uppercase;
 }
 
-;
-
 /* initial setup */
 body {
   background-color: var(--secondary-white);
 }
-
-/* not sure why duplicating it makes it work */
-
