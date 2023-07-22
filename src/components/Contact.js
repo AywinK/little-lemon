@@ -9,8 +9,8 @@ const Contact = () => {
         marginTop: "5px"
     }
     return (
-        <section style={{ maxWidth: "330px", marginRight: "2vw" }}>
-            <h4 className='sectionCategories'>Contact</h4>
+        <section style={{ maxWidth: "350px" }}>
+            <h4 className='sectionCategories' style={{ marginBottom: "5px", }}>Contact</h4>
             <ul style={listStyle}>
                 <li>
                     <PlaceIcon fontSize="medium" />

@@ -22,7 +22,7 @@ const Footer = (props) => {
 
     return (
         <footer style={footerStyles}>
-            <img src={Logo} style={{ marginRight: "25px" }} alt="Little Lemon logo" />
+            <img src={Logo} alt="Little Lemon logo" />
             <div style={divStyles}>
                 <Nav {...props} />
                 <Contact />
