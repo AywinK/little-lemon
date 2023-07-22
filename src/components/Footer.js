@@ -17,7 +17,6 @@ const Footer = (props) => {
 
     const divStyles = {
         display: "flex",
-        alignItems: "flex-start",
         justifyContent: "center"
     }
 
