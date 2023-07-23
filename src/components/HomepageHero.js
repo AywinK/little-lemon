@@ -14,7 +14,7 @@ const HomepageHero = () => {
     }
 
     const textDivStyles = {
-        maxWidth: "392px",
+        maxWidth: "420px",
     }
 
     const imageDivStyles = {
