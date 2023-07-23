@@ -6,6 +6,10 @@
   --secondary-light-pink: #fbdabb;
   --secondary-white: #edefee;
   --secondary-black: #333333;
+
+  --text-18px: 1.125rem;
+  --text-48px: 3rem;
+  --text-64px: 4rem;
 }
 
 /* resets */
@@ -23,7 +27,6 @@
 /* font family setup */
 body {
   font-family: "Karla", sans-serif;
-  font-size: 16px;
   line-height: 1.5;
   font-weight: normal;
   text-transform: none;
@@ -38,19 +41,25 @@ body {
 /* font size setup */
 .leadText,
 .cardTitle {
-  font-size: 18;
+  font-size: var(--text-18px);
 }
 
 .subTitle,
 .regularTitle {
-  font-size: 40;
+  font-size: var(--text-48px);
 }
 
 .displayTitle {
-  font-size: 64;
+  font-size: var(--text-64px);
 }
 
 /* font weight setup */
+.subTitle,
+p,
+.regularTitle {
+  font-weight: 400;
+}
+
 .displayTitle,
 .leadText,
 .highlightText {
@@ -116,6 +125,14 @@ footer>div {
   text-align: center;
 }
 
+.heroBackground {
+  background-color: var(--primary-dark);
+}
+
+.roundedBorder {
+  border-radius: 16px;
+}
+
 /* responsive media queries */
 
 footer,
@@ -158,5 +175,27 @@ footer>div>* {
   .openNav {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.heroBackground img {
+  @media (max-width: 970px) {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .displayTitle {
+    font-size: calc(var(--text-64px) * 0.95);
+  }
+
+  .regularTitle,
+  .subTitle {
+    font-size: calc(var(--text-48px) * 0.85);
+  }
+
+  .leadText,
+  .cardTitle {
+    font-size: calc(var(--text-18px) * 0.95);
   }
 }
