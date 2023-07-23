@@ -1,9 +1,9 @@
-import Nav from "./Nav";
+import FooterNav from "./FooterNav";
 import Contact from "./Contact";
 import Socials from "./Socials";
 import Logo from "../assets/icons/Logo.svg"
 
-const Footer = (props) => {
+const Footer = () => {
 
     const footerStyles = {
         backgroundColor: "var(--secondary-black)",
@@ -24,7 +24,7 @@ const Footer = (props) => {
         <footer style={footerStyles}>
             <img src={Logo} alt="Little Lemon logo" />
             <div style={divStyles}>
-                <Nav {...props} />
+                <FooterNav />
                 <Contact />
                 <Socials />
             </div>
