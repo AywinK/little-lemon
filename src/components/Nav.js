@@ -23,6 +23,7 @@ const Nav = () => {
 
     const handleCLick = e => {
         e.preventDefault();
+        handleToggleNav();
     }
 
     return (
