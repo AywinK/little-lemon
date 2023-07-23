@@ -184,7 +184,7 @@ footer>div>* {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 500px) {
   .displayTitle {
     font-size: calc(var(--text-64px) * 0.95);
   }
