@@ -3,13 +3,8 @@ import Logo from "../assets/icons/Logo.svg";
 
 const Header = () => {
 
-    const stylesObj = {
-        display: "flex",
-        margin: "20px",
-        alignItems: "center"
-    }
     return (
-        <header style={stylesObj}>
+        <header className="openNav">
             <img src={Logo} style={{ marginRight: "25px" }} alt="Little Lemon logo" />
 
             <Nav />
