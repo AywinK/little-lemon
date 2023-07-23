@@ -84,6 +84,23 @@ body {
   align-items: center;
 }
 
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-Style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 0px 10px;
+  color: var(--primary-dark);
+}
+
+.hamburgerMenuBtn {
+  display: none;
+}
+
 footer>div {
   align-items: flex-start;
   margin-bottom: 20px;
@@ -104,6 +121,14 @@ footer>div>* {
 
     .sectionCategories {
       margin-top: 10px;
+    }
+  }
+}
+
+nav {
+  @media (max-width: 768px) {
+    ul li a {
+      display: none;
     }
   }
 }
