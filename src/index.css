@@ -84,6 +84,14 @@ body {
   align-items: center;
 }
 
+header {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 header nav ul {
   display: flex;
   align-items: center;
@@ -125,10 +133,30 @@ footer>div>* {
   }
 }
 
-nav {
-  @media (max-width: 768px) {
-    ul li a {
-      display: none;
-    }
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+  }
+
+  header nav:last-child {
+    text-align: end;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .hamburgerMenuBtn {
+    display: initial;
+    position: absolute;
+    right: 15px;
+    top: 2.3vh;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  .openNav {
+    display: flex;
+    flex-direction: column;
   }
 }

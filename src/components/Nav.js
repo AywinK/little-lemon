@@ -1,31 +1,41 @@
 import MenuIcon from '@mui/icons-material/Menu';
+import { useRef } from 'react';
 
 const Nav = () => {
-    const stylesObj = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
-        listStyle: "none",
-    };
+    // const stylesObj = {
+    //     display: "flex",
+    //     alignItems: "center",
+    //     justifyContent: "space-around",
+    //     listStyle: "none",
+    // };
 
-    const linkStyles = {
-        textDecoration: "none",
-        padding: "0px 10px",
-        color: "var(--primary-dark)"
-    };
+    // const linkStyles = {
+    //     textDecoration: "none",
+    //     padding: "0px 10px",
+    //     color: "var(--primary-dark)"
+    // };
 
+    const openNavRef = useRef(null);
+    const handleToggleNav = () => {
+        openNavRef.current.classList.toggle("openNav");
+    }
+
+
+    const handleCLick = e => {
+        e.preventDefault();
+    }
 
     return (
         <nav>
-            <ul className="sectionTitle">
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="menu">Menu</a></li>
-                <li><a href="reservations">Reservations</a></li>
-                <li><a href="order">Order Online</a></li>
-                <li><a href="login">Login</a></li>
+            <ul className="sectionTitle" ref={openNavRef}>
+                <li><a onClick={handleCLick} href="home">Home</a></li>
+                <li><a onClick={handleCLick} href="about">About</a></li>
+                <li><a onClick={handleCLick} href="menu">Menu</a></li>
+                <li><a onClick={handleCLick} href="reservations">Reservations</a></li>
+                <li><a onClick={handleCLick} href="order">Order Online</a></li>
+                <li><a onClick={handleCLick} href="login">Login</a></li>
             </ul>
-            <i className="hamburgerMenuBtn" ><MenuIcon fontSize="large" /></i>
+            <i className="hamburgerMenuBtn" onClick={handleToggleNav}><MenuIcon fontSize="large" /></i>
         </nav>
     )
 }
