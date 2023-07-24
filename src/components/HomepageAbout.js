@@ -10,7 +10,6 @@ const HomepageAbout = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 margin: "20px",
-                maxHeight: "360px",
                 flexWrap: "wrap"
             }}
         >
@@ -36,41 +35,40 @@ const HomepageAbout = () => {
                 >Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
 
-            <div>
-                <div
+            <div
+                style={{
+                    width: "360px",
+                    maxHeight: "360px",
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3,120px)",
+                    gridTemplateRows: "repeat(3,120px)",
+                    gap: "0px"
+                }}
+            >
+                <img
                     style={{
-                        position: "relative",
-                        width: "360px",
-                        height: "360px",
+                        borderRadius: "16px",
+                        objectFit: "cover",
+                        zIndex: "1",
+                        maxWidth: "240px",
+                        height: "240px",
+                        gridRow: "2/4",
+                        gridColumn: "1/2"
                     }}
-                >
-                    <img
-                        style={{
-                            borderRadius: "16px",
-                            objectFit: "cover",
-                            position: "absolute",
-                            bottom: "20px",
-                            left: "20px",
-                            zIndex: "1",
-                            maxWidth: "240px",
-                            height: "240px",
-                        }}
-                        src={imageB}
-                    />
+                    src={imageB}
+                />
 
-                    <img
-                        style={{
-                            borderRadius: "16px",
-                            objectFit: "cover",
-                            position: "absolute",
-                            top: "20px",
-                            right: "20px",
-                            maxWidth: "240px",
-                            height: "240px",
-                        }}
-                        src={imageA}
-                    />
-                </div>
+                <img
+                    style={{
+                        borderRadius: "16px",
+                        objectFit: "cover",
+                        maxWidth: "240px",
+                        height: "240px",
+                        gridRow: "1/2",
+                        gridColumn: "2/4"
+                    }}
+                    src={imageA}
+                />
             </div>
         </section>
     )
