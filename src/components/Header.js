@@ -5,7 +5,10 @@ const Header = () => {
 
     return (
         <header className="openNav">
-            <img src={Logo} style={{ marginRight: "25px" }} alt="Little Lemon logo" />
+            <img src={Logo} style={{
+                marginRight: "25px",
+                overflowX: "hidden"
+            }} alt="Little Lemon logo" />
 
             <Nav />
         </header>
