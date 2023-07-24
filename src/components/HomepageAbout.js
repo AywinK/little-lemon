@@ -56,6 +56,7 @@ const HomepageAbout = () => {
                         gridColumn: "1/2"
                     }}
                     src={imageB}
+                    alt="Mario and Adrian"
                 />
 
                 <img
@@ -68,6 +69,7 @@ const HomepageAbout = () => {
                         gridColumn: "2/4"
                     }}
                     src={imageA}
+                    alt="Mario and Adrian"
                 />
             </div>
         </section>
