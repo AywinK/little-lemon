@@ -2,6 +2,7 @@
 import HomepageHero from "./HomepageHero";
 import HomepageSpecials from "./HomepageSpecials";
 import HomepageTestimonials from "./HomepageTestimonials";
+import HomepageAbout from "./HomepageAbout";
 
 const Main = () => {
 
@@ -9,7 +10,8 @@ const Main = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: "5px"
     }
 
     return (
@@ -17,6 +19,7 @@ const Main = () => {
             <HomepageHero />
             <HomepageSpecials />
             <HomepageTestimonials />
+            <HomepageAbout />
         </main>
     )
 };
