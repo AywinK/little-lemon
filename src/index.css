@@ -133,6 +133,10 @@ footer>div {
   border-radius: 16px;
 }
 
+.star {
+  background-image: url(./assets//icons/star.png);
+}
+
 /* responsive media queries */
 
 footer,
