@@ -54,7 +54,7 @@ const FoodCard = ({ img, name, description, price }) => {
                     textDecoration: "none",
                     color: "var(--primary-dark)"
                 }}
-                href="#"
+                href="https://www.littlelemonrestaurant.com/"
                 className="leadText"
             ><p
                 style={{
