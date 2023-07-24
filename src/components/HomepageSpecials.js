@@ -1,4 +1,7 @@
-
+import FoodCard from "./FoodCard";
+import greeksalad from "../assets/images/greek salad.jpg";
+import bruchetta from "../assets/images/bruchetta.svg";
+import lemondessert from "../assets/images/lemon dessert.jpg";
 
 const HomepageSpecials = () => {
 
@@ -26,6 +29,33 @@ const HomepageSpecials = () => {
             <div style={titleDivStyles}>
                 <h2 className="displayTitle" >Specials</h2>
                 <button>book a table placeholder</button>
+            </div>
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-evenly",
+                    flexWrap: "wrap"
+                }}
+            >
+                <FoodCard
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    price={12.99}
+                    img={greeksalad}
+                    name="Greek Salad"
+                />
+                <FoodCard
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    price={5.99}
+                    img={bruchetta}
+                    name="Bruchetta"
+                />
+                <FoodCard
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+                    price={5.00}
+                    img={lemondessert}
+                    name="Lemon Dessert"
+                />
             </div>
         </section>
     )
