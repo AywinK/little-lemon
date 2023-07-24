@@ -1,6 +1,7 @@
 
 import HomepageHero from "./HomepageHero";
 import HomepageSpecials from "./HomepageSpecials";
+import HomepageTestimonials from "./HomepageTestimonials";
 
 const Main = () => {
 
@@ -15,6 +16,7 @@ const Main = () => {
         <main style={styles}>
             <HomepageHero />
             <HomepageSpecials />
+            <HomepageTestimonials />
         </main>
     )
 };
