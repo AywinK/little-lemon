@@ -11,7 +11,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main />}></Route>
-        <Route path="/booking" element={<Reservations />}></Route>
+        <Route path="/reservations" element={<Reservations />}></Route>
       </Routes>
 
       <Footer isFooter={true} />
