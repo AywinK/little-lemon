@@ -58,7 +58,15 @@ const FormSection = () => {
             }}
         >
             <FormSectionIndication />
-            <BookingDetails />
+            <BookingDetails
+                data={data}
+                availableTimesOptions={availableTimesOptions}
+                handleSubmit={handleSubmit}
+                handleDateChange={handleDateChange}
+                handleTimeChange={handleTimeChange}
+                handleGuestsChange={handleGuestsChange}
+                handleOccasionChange={handleOccasionChange}
+            />
             <FormSectionIndication />
             <ContactDetails />
         </section>
