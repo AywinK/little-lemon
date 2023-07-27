@@ -1,3 +1,5 @@
+import ConfirmedBooking from "./ConfirmedBooking";
+
 const BookingDetails = ({
     data,
     availableTimesOptions,
@@ -16,6 +18,7 @@ const BookingDetails = ({
                 borderRadius: "16px",
             }}
         >
+            <ConfirmedBooking />
             <form
                 onSubmit={handleSubmit}
                 style={{
@@ -40,7 +43,7 @@ const BookingDetails = ({
                     style={{
                         padding: "8px",
                         borderRadius: "16px",
-                        border: "1px solid var(--primary)",
+                        border: "1px solid var(--primary-dark)",
                         width: "100%",
                     }}
                 />
@@ -54,7 +57,7 @@ const BookingDetails = ({
                     style={{
                         padding: "8px",
                         borderRadius: "16px",
-                        border: "1px solid var(--primary)",
+                        border: "1px solid var(--primary-dark)",
                         width: "100%",
                     }}
                 >
@@ -75,7 +78,7 @@ const BookingDetails = ({
                     style={{
                         padding: "8px",
                         borderRadius: "16px",
-                        border: "1px solid var(--primary)",
+                        border: "1px solid var(--primary-dark)",
                         width: "100%",
                     }}
                 />
@@ -89,7 +92,7 @@ const BookingDetails = ({
                     style={{
                         padding: "8px",
                         borderRadius: "16px",
-                        border: "1px solid var(--primary)",
+                        border: "1px solid var(--primary-dark)",
                         width: "100%",
                     }}
                 >

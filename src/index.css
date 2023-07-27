@@ -168,6 +168,45 @@ footer>div {
   background-color: var(--secondary-black);
 }
 
+.confirmationBackdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  transition-duration: 1s;
+  opacity: 0;
+  display: none;
+}
+
+.confirmation {
+  position: fixed;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 175px);
+  min-width: 350px;
+  max-width: 400px;
+  min-height: 400px;
+  border-radius: 16px;
+  border: 1px solid var(--primary-light);
+  background-color: var(--primary-dark);
+  color: var(--secondary-white);
+  padding: 10px 20px;
+  transition-duration: 3s;
+  color: var(--secondary-white);
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  padding-top: 20px;
+  font-size: small;
+}
+
+.show {
+  display: initial;
+  opacity: 1;
+  transition-duration: 1s;
+}
+
 /* responsive media queries */
 
 footer,
@@ -232,5 +271,11 @@ footer>div>* {
   .leadText,
   .cardTitle {
     font-size: calc(var(--text-18px) * 0.95);
+  }
+}
+
+@media (min-width: 768px) {
+  .confirmation {
+    transform: scale(1.5);
   }
 }
