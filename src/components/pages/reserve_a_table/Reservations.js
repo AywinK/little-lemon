@@ -1,6 +1,6 @@
 import FormSection from "./FormSection";
 import Hero from "./Hero";
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 
 const Reservations = () => {
 
