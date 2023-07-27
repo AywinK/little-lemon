@@ -1,4 +1,6 @@
-import restaurantfood from "../assets/images/restauranfood.jpg"
+import restaurantfood from "../assets/images/restauranfood.jpg";
+import { NavLink } from "react-router-dom";
+import Nav from "./Nav";
 
 const HomepageHero = () => {
 
@@ -39,7 +41,8 @@ const HomepageHero = () => {
                 >
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
-                <button className="cta leadText">Reserve a Table</button>
+                <NavLink to="/reservations"><button className="cta leadText">Reserve a Table</button>
+                </NavLink>
             </div>
             <div style={imageDivStyles}>
                 <img src={restaurantfood} className="roundedBorder" width="350px" height="529px" alt="succulent food on a platter" />
