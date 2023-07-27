@@ -28,7 +28,7 @@ const HomepageSpecials = () => {
         <section style={sectionStyles}>
             <div style={titleDivStyles}>
                 <h2 className="displayTitle" >Specials</h2>
-                <button className="cta leadText">Online Menu</button>
+                <button style={{maxWidth: "150px"}} className="cta leadText">Online Menu</button>
             </div>
             <div
                 style={{
