@@ -137,6 +137,36 @@ footer>div {
   background-image: url(./assets//icons/star.png);
 }
 
+.cta {
+  background-color: var(--primary-light);
+  padding: 10px;
+  color: var(--primary-dark);
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.cta:hover {
+  background-color: var(--secondary-black);
+  color: var(--secondary-white);
+}
+
+.submit {
+  background-color: var(--primary-dark);
+  padding: 10px;
+  color: var(--secondary-white);
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit:hover {
+  background-color: var(--secondary-black);
+}
+
 /* responsive media queries */
 
 footer,

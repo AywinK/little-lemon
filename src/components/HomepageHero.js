@@ -34,12 +34,12 @@ const HomepageHero = () => {
                     className="subTitle"
                 >Chicago</h2>
                 <p
-                style={{margin: "1ch auto"}}
+                    style={{ margin: "1ch auto" }}
                     className="subTitle"
                 >
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
-                <button>book a table placeholder</button>
+                <button className="cta leadText">Reserve a Table</button>
             </div>
             <div style={imageDivStyles}>
                 <img src={restaurantfood} className="roundedBorder" width="350px" height="529px" alt="succulent food on a platter" />

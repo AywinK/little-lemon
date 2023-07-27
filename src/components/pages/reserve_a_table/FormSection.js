@@ -56,7 +56,8 @@ const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                margin: "10px"
             }}
         >
             <FormSectionIndication />
