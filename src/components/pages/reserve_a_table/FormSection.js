@@ -15,7 +15,6 @@ const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
     const availableTimesOptions = availableTimes.map((time) => (<option key={time}>{time}</option>));
 
     useEffect(() => {
-        console.log(availableTimes.length);
         setAvailableTimes(dispatch, data.date);
     }, [data.date]);
 
