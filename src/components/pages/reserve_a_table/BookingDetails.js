@@ -99,7 +99,6 @@ const BookingDetails = ({
                 <input
                     type="submit"
                     value="Make Your Reservation"
-                    role="submit"
                     aria-label="Make Your reservation"
                     className="submit leadText"
                 />
