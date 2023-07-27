@@ -3,13 +3,13 @@ import Hero from "./Hero";
 import { useReducer } from "react";
 import { fetchAPI, submitAPI } from "../../../../src/apis/bookingAPI";
 
-const UPDATE_TIMES = "UPDATE_TIMES"
+const UPDATE_TIMES = "UPDATE_TIMES";
 
 const reducer = (state, action) => {
     switch (action.type) {
         case UPDATE_TIMES:
             // logic to update times based on date input
-            return initialiseTimes();
+            return fetchAPI(action.date)
         default:
             return state;
     }
@@ -35,7 +35,7 @@ const Reservations = () => {
     return (
         <main>
             <Hero />
-            <FormSection availableTimes={availableTimes} setAvailableTimes={updateTimes} />
+            <FormSection availableTimes={availableTimes} setAvailableTimes={updateTimes} dispatch={dispatch} />
         </main>
     )
 }
