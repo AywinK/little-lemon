@@ -3,7 +3,7 @@ import BookingDetails from "./BookingDetails";
 import ContactDetails from "./ContactDetails";
 import { useState } from "react";
 
-const FormSection = () => {
+const FormSection = ({ availableTimes, setAvailableTimes }) => {
 
     const [data, setData] = useState({
         date: "",
@@ -11,8 +11,6 @@ const FormSection = () => {
         guests: "",
         occasion: ""
     });
-
-    const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"]);
 
     const availableTimesOptions = availableTimes.map((time) => (<option key={time}>{time}</option>));
 
