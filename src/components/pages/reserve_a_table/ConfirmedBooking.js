@@ -6,12 +6,6 @@ const ConfirmedBooking = ({ data, submissionStatus, setSubmissionStatus }) => {
 
     const modalRef = useRef(null);
 
-    const fakeData = {
-        date: "2/1/12",
-        time: "12:00",
-        guests: "2"
-    }
-
     const handleCLick = (e) => {
         e.preventDefault();
         modalRef.current.classList.toggle("show");
