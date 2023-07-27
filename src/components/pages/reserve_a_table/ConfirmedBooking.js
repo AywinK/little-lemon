@@ -2,7 +2,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { NavLink } from "react-router-dom";
 import { useRef } from 'react';
 
-const ConfirmedBooking = () => {
+const ConfirmedBooking = ({ data, submissionStatus, setSubmissionStatus }) => {
 
     const modalRef = useRef(null);
 
@@ -13,14 +13,16 @@ const ConfirmedBooking = () => {
     }
 
     const handleCLick = (e) => {
+        e.preventDefault();
         modalRef.current.classList.toggle("show");
+        setSubmissionStatus(false)
     }
 
     return (
 
         <div
             ref={modalRef}
-            className="confirmationBackdrop"
+            className={submissionStatus ? "confirmationBackdrop show" : "confirmationBackdrop"}
             role="dialog"
         >
             <div
@@ -44,9 +46,9 @@ const ConfirmedBooking = () => {
                 <h3 className="cardTitle">Here are the details of your reservation:</h3>
                 <br />
                 <ul style={{ listStyle: "none", paddingLeft: "5px" }} className="leadText">
-                    <li>Date: {fakeData.date}</li>
-                    <li>Time: {fakeData.time}</li>
-                    <li>Guests: {fakeData.guests}</li>
+                    <li>Date: {data.date}</li>
+                    <li>Time: {data.time}</li>
+                    <li>Guests: {data.guests}</li>
                 </ul>
                 <br />
                 <NavLink to="/"><button style={{ width: "350px" }} className="cta leadText">Online Menu</button></NavLink>

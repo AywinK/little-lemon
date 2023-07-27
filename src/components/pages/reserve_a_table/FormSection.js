@@ -3,10 +3,10 @@ import BookingDetails from "./BookingDetails";
 import ContactDetails from "./ContactDetails";
 import { useState, useEffect } from "react";
 
-const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
+const FormSection = ({ submitForm, availableTimes, setAvailableTimes, dispatch }) => {
 
     const [data, setData] = useState({
-        date: new Date(),
+        date: new Date().getDate(),
         time: "",
         guests: "",
         occasion: ""
@@ -18,15 +18,7 @@ const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
         setAvailableTimes(dispatch, data.date);
     }, [data.date, dispatch, setAvailableTimes]);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // setData({
-        //     date: e.target["res-date"].value,
-        //     time: e.target["res-time"].value,
-        //     guests: e.target["guests"].value,
-        //     occasion: e.target["occasion"].value
-        // });
-    }
+
 
     const handleDateChange = (e) => {
         const { value } = e.target;
@@ -64,7 +56,7 @@ const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
             <BookingDetails
                 data={data}
                 availableTimesOptions={availableTimesOptions}
-                handleSubmit={handleSubmit}
+                submitForm={submitForm}
                 handleDateChange={handleDateChange}
                 handleTimeChange={handleTimeChange}
                 handleGuestsChange={handleGuestsChange}

@@ -1,14 +1,22 @@
 import ConfirmedBooking from "./ConfirmedBooking";
+import { useState } from "react";
 
 const BookingDetails = ({
     data,
     availableTimesOptions,
-    handleSubmit,
+    submitForm,
     handleDateChange,
     handleTimeChange,
     handleGuestsChange,
     handleOccasionChange
 }) => {
+
+    const [submissionStatus, setSubmissionStatus] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmissionStatus(submitForm(data));
+    }
 
     return (
         <div
@@ -18,7 +26,11 @@ const BookingDetails = ({
                 borderRadius: "16px",
             }}
         >
-            <ConfirmedBooking />
+            <ConfirmedBooking
+                data={data}
+                setSubmissionStatus={setSubmissionStatus}
+                submissionStatus={submissionStatus}
+            />
             <form
                 onSubmit={handleSubmit}
                 style={{

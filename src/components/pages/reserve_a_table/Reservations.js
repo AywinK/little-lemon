@@ -1,7 +1,7 @@
 import FormSection from "./FormSection";
 import Hero from "./Hero";
 import { useReducer } from "react";
-import { fetchAPI } from "../../../../src/apis/bookingAPI";
+import { fetchAPI, submitAPI } from "../../../../src/apis/bookingAPI";
 
 const UPDATE_TIMES = "UPDATE_TIMES";
 
@@ -25,6 +25,22 @@ const updateTimes = (dispatch, date) => {
     dispatch({ type: UPDATE_TIMES, date: date });
 }
 
+// const handleSubmit = (e, data) => {
+//     e.preventDefault();
+//     console.log(e.target)
+//     // setData({
+//     //     date: e.target["res-date"].value,
+//     //     time: e.target["res-time"].value,
+//     //     guests: e.target["guests"].value,
+//     //     occasion: e.target["occasion"].value
+//     // });
+// }
+
+const submitForm = (formData) => {
+    const isSubmitted = submitAPI(formData);
+    return isSubmitted;
+}
+
 const Reservations = () => {
 
     // const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"]);
@@ -34,7 +50,7 @@ const Reservations = () => {
     return (
         <main>
             <Hero />
-            <FormSection availableTimes={availableTimes} setAvailableTimes={updateTimes} dispatch={dispatch} />
+            <FormSection submitForm={submitForm} availableTimes={availableTimes} setAvailableTimes={updateTimes} dispatch={dispatch} />
         </main>
     )
 }
