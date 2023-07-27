@@ -1,6 +1,7 @@
 import FormSection from "./FormSection";
 import Hero from "./Hero";
 import { useReducer } from "react";
+import { fetchAPI, submitAPI } from "../../../../src/apis/bookingAPI";
 
 const UPDATE_TIMES = "UPDATE_TIMES"
 
