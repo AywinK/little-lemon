@@ -5,6 +5,7 @@ const HomepageAbout = () => {
 
     return (
         <section
+            id="about"
             style={{
                 display: "flex",
                 alignItems: "center",

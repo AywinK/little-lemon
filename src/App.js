@@ -10,8 +10,9 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/reservations" element={<Reservations />}></Route>
+        <Route path="/" element={<Main />} />
+        <Route path="/home" element={<Main />} />
+        <Route path="/reservations" element={<Reservations />} />
       </Routes>
 
       <Footer isFooter={true} />

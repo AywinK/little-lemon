@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom";
 
 const FooterNav = () => {
 
@@ -13,12 +13,12 @@ const FooterNav = () => {
         <nav>
             <h4 style={{ marginBottom: "5px" }} className="sectionCategories">Navigation</h4>
             <ul style={footerStyles}>
-                <li><a style={footerStyles} href="home">Home</a></li>
-                <li><a style={footerStyles} href="about">About</a></li>
-                <li><a style={footerStyles} href="menu">Menu</a></li>
-                <li><a style={footerStyles} href="reservations">Reservations</a></li>
-                <li><a style={footerStyles} href="order">Order Online</a></li>
-                <li><a style={footerStyles} href="login">Login</a></li>
+                <li><NavLink style={footerStyles} to="/home">Home</NavLink></li>
+                <li><a style={footerStyles} href="/#about">About</a></li>
+                <li><a style={footerStyles} href="/#menu">Menu</a></li>
+                <li><NavLink style={footerStyles} to="/reservations">Reservations</NavLink></li>
+                <li><NavLink style={footerStyles} to="/">Order Online</NavLink></li>
+                <li><NavLink style={footerStyles} to="/">Login</NavLink></li>
             </ul>
         </nav>
     )

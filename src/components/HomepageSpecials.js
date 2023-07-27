@@ -25,10 +25,10 @@ const HomepageSpecials = () => {
     }
 
     return (
-        <section style={sectionStyles}>
+        <section style={sectionStyles} id="menu">
             <div style={titleDivStyles}>
                 <h2 className="displayTitle" >Specials</h2>
-                <button style={{maxWidth: "150px"}} className="cta leadText">Online Menu</button>
+                <button style={{ maxWidth: "150px" }} className="cta leadText">Online Menu</button>
             </div>
             <div
                 style={{

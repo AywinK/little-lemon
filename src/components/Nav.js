@@ -1,5 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
     // const stylesObj = {
@@ -22,19 +23,18 @@ const Nav = () => {
 
 
     const handleCLick = e => {
-        e.preventDefault();
         handleToggleNav();
     }
 
     return (
         <nav>
             <ul className="sectionTitle" ref={openNavRef}>
-                <li><a onClick={handleCLick} href="home">Home</a></li>
-                <li><a onClick={handleCLick} href="about">About</a></li>
-                <li><a onClick={handleCLick} href="menu">Menu</a></li>
-                <li><a onClick={handleCLick} href="reservations">Reservations</a></li>
-                <li><a onClick={handleCLick} href="order">Order Online</a></li>
-                <li><a onClick={handleCLick} href="login">Login</a></li>
+                <li><NavLink onClick={handleCLick} to="/home">Home</NavLink></li>
+                <li><a onClick={handleCLick} href="/#about">About</a></li>
+                <li><a onClick={handleCLick} href="/#menu">Menu</a></li>
+                <li><NavLink onClick={handleCLick} to="/reservations">Reservations</NavLink></li>
+                <li><NavLink onClick={handleCLick} to="/">Order Online</NavLink></li>
+                <li><NavLink onClick={handleCLick} to="/">Login</NavLink></li>
             </ul>
             <i className="hamburgerMenuBtn" onClick={handleToggleNav}><MenuIcon fontSize="large" /></i>
         </nav>
