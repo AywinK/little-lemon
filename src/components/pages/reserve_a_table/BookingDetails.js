@@ -27,7 +27,6 @@ const BookingDetails = ({
                     borderRadius: "16px",
                 }}
                 // Adding ARIA roles and attributes
-                role="form"
                 aria-label="Booking details form"
             >
                 <label htmlFor="res-date">Choose date</label>
@@ -100,7 +99,7 @@ const BookingDetails = ({
                 <input
                     type="submit"
                     value="Make Your Reservation"
-                    role="button"
+                    role="submit"
                     aria-label="Make Your reservation"
                     className="submit leadText"
                 />

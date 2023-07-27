@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
 
     const [data, setData] = useState({
-        date: "",
+        date: new Date(),
         time: "",
         guests: "",
         occasion: ""
@@ -16,7 +16,7 @@ const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
 
     useEffect(() => {
         setAvailableTimes(dispatch, data.date);
-    }, [data.date]);
+    }, [data.date, dispatch, setAvailableTimes]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
