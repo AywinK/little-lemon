@@ -1,9 +1,9 @@
 import FormSectionIndication from "./FormSectionIndication";
 import BookingDetails from "./BookingDetails";
 import ContactDetails from "./ContactDetails";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const FormSection = ({ availableTimes, setAvailableTimes }) => {
+const FormSection = ({ availableTimes, setAvailableTimes, dispatch }) => {
 
     const [data, setData] = useState({
         date: "",
@@ -13,6 +13,10 @@ const FormSection = ({ availableTimes, setAvailableTimes }) => {
     });
 
     const availableTimesOptions = availableTimes.map((time) => (<option key={time}>{time}</option>));
+
+    useEffect(() => {
+        setAvailableTimes(dispatch, data.date);
+    }, [data.date]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -52,7 +56,8 @@ const FormSection = ({ availableTimes, setAvailableTimes }) => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                margin: "10px"
             }}
         >
             <FormSectionIndication />

@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import BookingDetails from './components/pages/reserve_a_table/BookingDetails';
 import { initialiseTimes, updateTimes } from './components/pages/reserve_a_table/Reservations';
+import { fetchAPI, submitAPI } from './apis/bookingAPI';
 
 test('renders occasion label in form', () => {
     render(<BookingDetails data={{
@@ -51,7 +52,7 @@ test("user can submit form", () => {
 test("inititaliseTimes returns time array", () => {
     const expectedTimes = ["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"];
     const result = initialiseTimes();
-    expect(result).toEqual(expectedTimes);
+    expect(result).toEqual(fetchAPI(new Date()));
 });
 
 test("updateTimes dispatches correct action", () => {

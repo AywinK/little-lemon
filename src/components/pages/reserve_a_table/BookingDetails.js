@@ -1,4 +1,3 @@
-
 const BookingDetails = ({
     data,
     availableTimesOptions,
@@ -8,7 +7,6 @@ const BookingDetails = ({
     handleGuestsChange,
     handleOccasionChange
 }) => {
-
 
     return (
         <div
@@ -33,12 +31,19 @@ const BookingDetails = ({
                 aria-label="Booking details form"
             >
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date"
+                <input
+                    type="date"
                     id="res-date"
                     onChange={handleDateChange}
                     value={data.date}
                     aria-labelledby="res-date-label"
                     data-testid="res-date"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary)",
+                        width: "100%",
+                    }}
                 />
                 <label htmlFor="res-time">Choose time</label>
                 <select
@@ -47,6 +52,12 @@ const BookingDetails = ({
                     value={data.time}
                     aria-labelledby="res-time-label"
                     data-testid="res-time"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary)",
+                        width: "100%",
+                    }}
                 >
                     {availableTimesOptions}
                 </select>
@@ -62,6 +73,12 @@ const BookingDetails = ({
                     aria-labelledby="guests-label"
                     aria-describedby="guests-description"
                     data-testid="guests"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary)",
+                        width: "100%",
+                    }}
                 />
                 <label htmlFor="occasion">Occasion</label>
                 <select
@@ -70,17 +87,24 @@ const BookingDetails = ({
                     value={data.occasion}
                     aria-labelledby="occasion-label"
                     data-testid="occasion"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary)",
+                        width: "100%",
+                    }}
                 >
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
                 <input
                     type="submit"
-                    value="Make Your reservation"
+                    value="Make Your Reservation"
                     role="button"
                     aria-label="Make Your reservation"
+                    className="submit leadText"
                 />
-            </form >
+            </form>
         </div>
     )
 }
