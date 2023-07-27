@@ -38,6 +38,7 @@ const BookingDetails = ({
                     onChange={handleDateChange}
                     value={data.date}
                     aria-labelledby="res-date-label"
+                    data-testid="res-date"
                 />
                 <label htmlFor="res-time">Choose time</label>
                 <select
@@ -45,6 +46,7 @@ const BookingDetails = ({
                     onChange={handleTimeChange}
                     value={data.time}
                     aria-labelledby="res-time-label"
+                    data-testid="res-time"
                 >
                     {availableTimesOptions}
                 </select>
@@ -59,6 +61,7 @@ const BookingDetails = ({
                     id="guests"
                     aria-labelledby="guests-label"
                     aria-describedby="guests-description"
+                    data-testid="guests"
                 />
                 <label htmlFor="occasion">Occasion</label>
                 <select
@@ -66,7 +69,7 @@ const BookingDetails = ({
                     onChange={handleOccasionChange}
                     value={data.occasion}
                     aria-labelledby="occasion-label"
-
+                    data-testid="occasion"
                 >
                     <option>Birthday</option>
                     <option>Anniversary</option>
@@ -75,7 +78,7 @@ const BookingDetails = ({
                     type="submit"
                     value="Make Your reservation"
                     role="button"
-                    aria-label="Submit reservation"
+                    aria-label="Make Your reservation"
                 />
             </form >
         </div>
