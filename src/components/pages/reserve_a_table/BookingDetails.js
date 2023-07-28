@@ -179,7 +179,7 @@ const BookingDetails = ({
                     <option>Anniversary</option>
                 </select>
 
-                <label htmlFor="comments">Comments</label>
+                <label htmlFor="comments">Additional Comments</label>
                 <textarea
                     id="comments"
                     onChange={handleCommentsChange}
