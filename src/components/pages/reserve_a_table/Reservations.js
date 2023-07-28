@@ -16,7 +16,7 @@ const reducer = (state, action) => {
 }
 
 const initialiseTimes = () => {
-    const date = new Date();
+    const date = new Date().getDate();
     const timesArr = fetchAPI(date);
     return timesArr;
 }

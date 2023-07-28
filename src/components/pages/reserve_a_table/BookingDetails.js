@@ -3,12 +3,9 @@ import { useState } from "react";
 
 const BookingDetails = ({
     data,
+    setData,
     availableTimesOptions,
     submitForm,
-    handleDateChange,
-    handleTimeChange,
-    handleGuestsChange,
-    handleOccasionChange
 }) => {
 
     const [submissionStatus, setSubmissionStatus] = useState(false);
@@ -16,6 +13,26 @@ const BookingDetails = ({
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmissionStatus(submitForm(data));
+    }
+
+    const handleDateChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, date: value }));
+    };
+
+    const handleTimeChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, time: value }))
+    };
+
+    const handleGuestsChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, guests: value }))
+    };
+
+    const handleOccasionChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, occasion: value }))
     }
 
     return (

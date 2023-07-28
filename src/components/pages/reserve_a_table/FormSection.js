@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 const FormSection = ({ submitForm, availableTimes, setAvailableTimes, dispatch }) => {
 
     const [data, setData] = useState({
-        date: new Date().getDate(),
-        time: "",
-        guests: "",
-        occasion: ""
+        date: `${(new Date()).getFullYear()}-0${(new Date()).getMonth()+1}-${(new Date()).getDate()}`,
+        time: availableTimes[0],
+        guests: "1",
+        occasion: "Birthday"
     });
 
     const availableTimesOptions = availableTimes.map((time) => (<option key={time}>{time}</option>));
@@ -20,25 +20,7 @@ const FormSection = ({ submitForm, availableTimes, setAvailableTimes, dispatch }
 
 
 
-    const handleDateChange = (e) => {
-        const { value } = e.target;
-        setData((prevData) => ({ ...prevData, date: value }));
-    };
 
-    const handleTimeChange = (e) => {
-        const { value } = e.target;
-        setData((prevData) => ({ ...prevData, time: value }))
-    };
-
-    const handleGuestsChange = (e) => {
-        const { value } = e.target;
-        setData((prevData) => ({ ...prevData, guests: value }))
-    };
-
-    const handleOccasionChange = (e) => {
-        const { value } = e.target;
-        setData((prevData) => ({ ...prevData, occasion: value }))
-    }
 
 
     return (
@@ -57,10 +39,7 @@ const FormSection = ({ submitForm, availableTimes, setAvailableTimes, dispatch }
                 data={data}
                 availableTimesOptions={availableTimesOptions}
                 submitForm={submitForm}
-                handleDateChange={handleDateChange}
-                handleTimeChange={handleTimeChange}
-                handleGuestsChange={handleGuestsChange}
-                handleOccasionChange={handleOccasionChange}
+                setData={setData}
             />
             <FormSectionIndication />
             <ContactDetails />
