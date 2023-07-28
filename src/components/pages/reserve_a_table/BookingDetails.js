@@ -8,6 +8,31 @@ const BookingDetails = ({
     submitForm,
 }) => {
 
+    const [validInput, setValidInput] = useState({
+        fName: true,
+        lName: true,
+        email: true
+    });
+
+    const handleFNameBlur = () => {
+        const value = (data.fName !== "");
+        console.log(validInput)
+        setValidInput((prevInput) => ({ ...prevInput, fName: value }));
+    };
+
+    const handleLNameBlur = () => {
+        const value = (data.lName !== "");
+        console.log(validInput)
+        setValidInput((prevInput) => ({ ...prevInput, lName: value }));
+    };
+
+    const handleEmailBlur = () => {
+        // const value = (data.email !== "");
+        const value = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(data.email)
+        console.log(validInput)
+        setValidInput((prevInput) => ({ ...prevInput, email: value }));
+    };
+
     const [submissionStatus, setSubmissionStatus] = useState(false);
 
     const handleSubmit = (e) => {
@@ -47,7 +72,8 @@ const BookingDetails = ({
 
     const handleFNameChange = (e) => {
         const { value } = e.target;
-        setData((prevData) => ({ ...prevData, fName: value }))
+        setData((prevData) => ({ ...prevData, fName: value }));
+        // setValidInput((prevState) => ({ ...prevState, fName: true}));
     };
 
     const handleLNameChange = (e) => {
@@ -191,7 +217,7 @@ const BookingDetails = ({
                         borderRadius: "16px",
                         border: "1px solid var(--primary-dark)",
                         width: "100%",
-                        minHeight: "200px", // Set an appropriate height for the textarea
+                        minHeight: "200px",
                     }}
                 />
 
@@ -202,6 +228,7 @@ const BookingDetails = ({
                     required
                     type="text"
                     id="fName"
+                    onBlur={handleFNameBlur}
                     onChange={handleFNameChange}
                     value={data.fName}
                     aria-labelledby="fName-label"
@@ -213,11 +240,13 @@ const BookingDetails = ({
                         width: "100%",
                     }}
                 />
+                {!!!validInput.fName && <p className="onBlur">Required field*</p>}
                 <label htmlFor="lName">Last Name</label>
                 <input
                     required
                     type="text"
                     id="lName"
+                    onBlur={handleLNameBlur}
                     onChange={handleLNameChange}
                     value={data.lName}
                     aria-labelledby="lName-label"
@@ -229,11 +258,13 @@ const BookingDetails = ({
                         width: "100%",
                     }}
                 />
+                {!!!validInput.lName && <p className="onBlur">Required field*</p>}
                 <label htmlFor="email">Email</label>
                 <input
                     required
                     type="email"
                     id="email"
+                    onBlur={handleEmailBlur}
                     onChange={handleEmailChange}
                     value={data.email}
                     aria-labelledby="email-label"
@@ -245,6 +276,7 @@ const BookingDetails = ({
                         width: "100%",
                     }}
                 />
+                {!!!validInput.email && <p className="onBlur">Invalid email address</p>}
 
                 <label htmlFor="phone">Phone Number (Optional)</label>
                 <input

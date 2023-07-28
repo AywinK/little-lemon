@@ -207,6 +207,13 @@ footer>div {
   transition-duration: 1s;
 }
 
+.onBlur {
+  color: var(--secondary-dark-pink);
+  font-size: small;
+  padding-left: 10px;
+  margin-top: -15px;
+}
+
 /* responsive media queries */
 
 footer,
