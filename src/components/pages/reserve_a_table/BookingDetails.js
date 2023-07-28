@@ -30,10 +30,41 @@ const BookingDetails = ({
         setData((prevData) => ({ ...prevData, guests: value }))
     };
 
+    const handleLocationChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, location: value }))
+    };
+
     const handleOccasionChange = (e) => {
         const { value } = e.target;
         setData((prevData) => ({ ...prevData, occasion: value }))
-    }
+    };
+
+    const handleCommentsChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, comments: value }))
+    };
+
+    const handleFNameChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, fName: value }))
+    };
+
+    const handleLNameChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, lName: value }))
+    };
+
+    const handleEmailChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, email: value }))
+    };
+
+    const handlePhoneChange = (e) => {
+        const { value } = e.target;
+        setData((prevData) => ({ ...prevData, phone: value }))
+    };
+
 
     return (
         <div
@@ -111,6 +142,25 @@ const BookingDetails = ({
                         width: "100%",
                     }}
                 />
+
+                <label htmlFor="location">Location</label>
+                <select
+                    id="location"
+                    onChange={handleLocationChange}
+                    value={data.location}
+                    aria-labelledby="location-label"
+                    data-testid="location"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                    }}
+                >
+                    <option>Indoors</option>
+                    <option>Outdoors</option>
+                </select>
+
                 <label htmlFor="occasion">Occasion</label>
                 <select
                     id="occasion"
@@ -128,6 +178,90 @@ const BookingDetails = ({
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
+
+                <label htmlFor="comments">Comments</label>
+                <textarea
+                    id="comments"
+                    onChange={handleCommentsChange}
+                    value={data.comments}
+                    aria-labelledby="comments-label"
+                    data-testid="comments"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                        minHeight: "200px", // Set an appropriate height for the textarea
+                    }}
+                />
+
+
+
+                <label htmlFor="fName">First Name</label>
+                <input
+                    type="text"
+                    id="fname"
+                    onChange={handleFNameChange}
+                    value={data.fName}
+                    aria-labelledby="fName-label"
+                    data-testid="fName"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                    }}
+                />
+                <label htmlFor="lName">Last Name</label>
+                <input
+                    type="text"
+                    id="lName"
+                    onChange={handleLNameChange}
+                    value={data.lName}
+                    aria-labelledby="lName-label"
+                    data-testid="lName"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                    }}
+                />
+                <label htmlFor="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    onChange={handleEmailChange}
+                    value={data.email}
+                    aria-labelledby="email-label"
+                    data-testid="email"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                    }}
+                />
+
+                <label htmlFor="phone">Phone Number (Optional)</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    onChange={handlePhoneChange}
+                    value={data.phone}
+                    aria-labelledby="phone-label"
+                    data-testid="phone"
+                    style={{
+                        padding: "8px",
+                        borderRadius: "16px",
+                        border: "1px solid var(--primary-dark)",
+                        width: "100%",
+                    }}
+                />
+
+
+
+
                 <input
                     type="submit"
                     value="Make Your Reservation"
