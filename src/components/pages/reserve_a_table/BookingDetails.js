@@ -199,8 +199,9 @@ const BookingDetails = ({
 
                 <label htmlFor="fName">First Name</label>
                 <input
+                    required
                     type="text"
-                    id="fname"
+                    id="fName"
                     onChange={handleFNameChange}
                     value={data.fName}
                     aria-labelledby="fName-label"
@@ -214,6 +215,7 @@ const BookingDetails = ({
                 />
                 <label htmlFor="lName">Last Name</label>
                 <input
+                    required
                     type="text"
                     id="lName"
                     onChange={handleLNameChange}
@@ -229,6 +231,7 @@ const BookingDetails = ({
                 />
                 <label htmlFor="email">Email</label>
                 <input
+                    required
                     type="email"
                     id="email"
                     onChange={handleEmailChange}
