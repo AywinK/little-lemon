@@ -29,7 +29,7 @@ test("user can submit form", () => {
         occasion: ""
     }}
         availableTimesOptions={["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"]}
-        handleSubmit={handleSubmit}
+        submitForm={handleSubmit}
     />);
 
     const dateInput = screen.getByTestId("res-date");
@@ -45,19 +45,22 @@ test("user can submit form", () => {
     const submitButton = screen.getByLabelText("Make Your reservation");
     fireEvent.click(submitButton);
 
-    expect(handleSubmitMock).toHaveBeenCalled()
+    // expect(handleSubmitMock).toHaveBeenCalled();
+    const modal = screen.queryByText("Booking Confirmation");
+    expect(modal).toBeInTheDocument();
 
 })
 
 test("inititaliseTimes returns time array", () => {
-    const expectedTimes = ["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"];
+    const date = new Date().getDate();
+    const expectedTimes = fetchAPI(date);
     const result = initialiseTimes();
-    expect(result).toEqual(fetchAPI(new Date()));
+    expect(result).toEqual(expectedTimes);
 });
 
 test("updateTimes dispatches correct action", () => {
     const mockDispatch = jest.fn();
-    const date = new Date()
+    const date = new Date().getDate();
     updateTimes(mockDispatch, date);
 
     expect(mockDispatch).toHaveBeenCalledWith({ type: "UPDATE_TIMES", date: date });
