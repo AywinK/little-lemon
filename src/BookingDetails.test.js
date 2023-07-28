@@ -5,18 +5,20 @@ import { fetchAPI } from './apis/bookingAPI';
 import { MemoryRouter } from 'react-router-dom';
 import ConfirmedBooking from './components/pages/reserve_a_table/ConfirmedBooking';
 
-// test('renders occasion label in form', () => {
-//     render(<BookingDetails data={{
-//         date: "2023-07-27",
-//         time: "18:00",
-//         guests: "4",
-//         occasion: "Birthday"
-//     }}
-//         availableTimesOptions={["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"]}
-//     />);
-//     const labelElement = screen.getByText(/Occasion/);
-//     expect(labelElement).toBeInTheDocument();
-// });
+test('renders occasion label in form', () => {
+    render(<MemoryRouter>
+        <BookingDetails data={{
+            date: "2023-07-27",
+            time: "18:00",
+            guests: "4",
+            occasion: "Birthday"
+        }}
+            availableTimesOptions={["17:00", "18:00", "19:00", "20:00,", "21:00", "22:00"]}
+        />
+    </MemoryRouter>);
+    const labelElement = screen.getByText("Occasion");
+    expect(labelElement).toBeInTheDocument();
+});
 
 test("user can submit form", () => {
 
