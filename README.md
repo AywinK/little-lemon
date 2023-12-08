@@ -29,7 +29,7 @@ Visit the little lemon website at: https://littlelemon.aywin.uk
 
 
 
-![Demo](demo.webm)
+![Demo](demo.gif)
 
 ## License
 
